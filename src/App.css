@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --dark-blue: #263238;
+  --light-blue: #455a64;
+  --text-Lblue: #b0bec5;
+  --special-green: #00d09c;
+}
 * {
   padding: 0;
   margin: 0;
@@ -11,4 +17,13 @@
 }
 .w-100vw {
   width: 100vw;
+}
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+.text-Lblue {
+  color: var(--text-Lblue);
 }

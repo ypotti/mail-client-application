@@ -1,0 +1,59 @@
+.sidebar-element {
+  list-style-type: none;
+  background-color: var(--light-blue);
+}
+.sidebar-element:hover {
+  background-color: var(--dark-blue);
+}
+.color-handle {
+  color: var(--text-Lblue);
+}
+.color-handle:hover {
+  color: white;
+}
+.style-none {
+  text-decoration: none;
+}
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.profile-image {
+  border-radius: 50%;
+  width: 60%;
+  max-width: 80px;
+  align-self: center;
+  /* transition: 5s; */
+}
+.profile-box {
+  align-self: center;
+  text-align: center;
+}
+.display-name-box {
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+.apply-border {
+  border-left: 4px solid var(--special-green);
+  background-color: var(--dark-blue) !important;
+}
+.side-bar-box {
+  position: relative;
+  max-width: 300px;
+  transition: 5s;
+}
+.arrow-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--special-green);
+  position: absolute;
+  right: -0.7rem;
+  border-radius: 50%;
+  top: 2.5rem;
+  background-color: white;
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+.t-180 {
+  transform: rotate(180deg);
+}

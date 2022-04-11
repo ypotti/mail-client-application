@@ -5,9 +5,11 @@ import "./pages.css";
 
 const Home = () => {
   return (
-    <div className="d-flex h-100vh w-100vw bg-warning">
+    <div className="d-flex h-100vh w-100vw">
       <Sidebar />
-      <Outlet />
+      <div className="bg-white flex-grow-1">
+        <Outlet />
+      </div>
     </div>
   );
 };
