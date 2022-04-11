@@ -18,12 +18,14 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+.bar-width {
+  width: 15rem;
+}
 .profile-image {
   border-radius: 50%;
   width: 60%;
   max-width: 80px;
   align-self: center;
-  /* transition: 5s; */
 }
 .profile-box {
   align-self: center;
@@ -40,7 +42,6 @@
 .side-bar-box {
   position: relative;
   max-width: 300px;
-  transition: 5s;
 }
 .arrow-icon {
   width: 1.4rem;

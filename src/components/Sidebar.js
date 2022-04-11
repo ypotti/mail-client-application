@@ -10,11 +10,12 @@ const Sidebar = () => {
   const [sideBar, setSideBar] = useState(true);
   const [selectedItem, setSelectedItem] = useState("MailBox");
   return (
-    <div className="d-flex flex-column bg-dark-blue side-bar-box">
-      <div
-        onClick={() => setSideBar(!sideBar)}
-        // className={`${!sideBar && "t-180"}`}
-      >
+    <div
+      className={`d-flex flex-column bg-dark-blue side-bar-box ${
+        !sideBar && "bar-width"
+      }`}
+    >
+      <div onClick={() => setSideBar(!sideBar)}>
         <IoIosArrowDroprightCircle
           className={`arrow-icon ${!sideBar && "t-180"}`}
         />
