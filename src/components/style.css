@@ -19,7 +19,8 @@
   height: 1.5rem;
 }
 .bar-width {
-  width: 15rem;
+  width: 16rem;
+  /* styles on expand */
 }
 .profile-image {
   border-radius: 50%;
@@ -57,4 +58,52 @@
 }
 .t-180 {
   transform: rotate(180deg);
+}
+.search-bar {
+  border: 0px;
+  outline: none;
+}
+.menu-icon {
+  border-radius: 4px;
+  background-color: var(--special-green);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
+.bell-icon {
+  color: var(--grey);
+  position: relative;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+.bg-special-green {
+  background-color: var(--special-green);
+}
+.notification-number {
+  top: -60%;
+  right: -50%;
+  height: 80%;
+  width: 80%;
+  padding: 0.1em;
+  border-radius: 10%;
+  font-size: 0.8rem;
+}
+.logout-icon {
+  color: var(--grey);
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.logout-btn {
+  color: var(--grey);
+  font-size: 1rem;
+  padding: 1em;
+  outline: none;
+  background: transparent;
+  border: 0px;
 }

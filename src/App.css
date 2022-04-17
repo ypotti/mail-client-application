@@ -4,6 +4,7 @@
   --light-blue: #455a64;
   --text-Lblue: #b0bec5;
   --special-green: #00d09c;
+  --grey: #667781;
 }
 * {
   padding: 0;
@@ -26,4 +27,7 @@
 }
 .text-Lblue {
   color: var(--text-Lblue);
+}
+.debug {
+  border: 1px solid black;
 }

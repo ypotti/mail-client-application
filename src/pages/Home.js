@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <div className="d-flex h-100vh w-100vw">
       <Sidebar />
-      <div className="bg-white flex-grow-1">
-        <Outlet />
-      </div>
+      {/* <div className="flex-grow-1"> */}
+      <Outlet />
+      {/* </div> */}
     </div>
   );
 };
