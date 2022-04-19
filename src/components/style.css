@@ -18,6 +18,10 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+.mini-icon {
+  width: 1rem;
+  height: 1rem;
+}
 .bar-width {
   width: 16rem;
   /* styles on expand */
@@ -85,6 +89,28 @@
 .bg-special-green {
   background-color: var(--special-green);
 }
+.bg-special-red {
+  background-color: var(--special-red);
+}
+.bg-special-blue {
+  background-color: var(--special-blue);
+}
+.bg-special-yellow {
+  background-color: var(--special-yellow);
+}
+
+.color-special-green {
+  color: var(--special-green);
+}
+.color-special-red {
+  color: var(--special-red);
+}
+.color-special-blue {
+  color: var(--special-blue);
+}
+.color-special-yellow {
+  color: var(--special-yellow);
+}
 .notification-number {
   top: -60%;
   right: -50%;
@@ -106,4 +132,13 @@
   outline: none;
   background: transparent;
   border: 0px;
+}
+.compose-mail-btn {
+  background-color: var(--special-green);
+  color: white;
+  font-size: 1rem;
+  padding: 0.5em;
+  align-self: stretch;
+  border: 0px;
+  outline: none;
 }
