@@ -19,8 +19,9 @@
   height: 1.5rem;
 }
 .mini-icon {
-  width: 1rem;
-  height: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1.5em;
 }
 .bar-width {
   width: 16rem;
@@ -141,4 +142,11 @@
   align-self: stretch;
   border: 0px;
   outline: none;
+}
+.un-ordered-list{
+  list-style-type: none;
+  padding: 0px;
+}
+.pointer{
+  cursor: pointer;
 }

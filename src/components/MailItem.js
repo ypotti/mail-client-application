@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const MailItem = (props) => {
   const { details } = props;
   return (
-    <li className="list-style-type-none">
+    <li className="d-flex flex-row align-items-center pointer">
       {details.icon}
-      <p>{details.displayName}</p>
+      <span>{details.displayName}</span>
+      <hr className="color-special-blue bg-special-blue"/>
     </li>
   );
 };

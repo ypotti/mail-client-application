@@ -16,7 +16,7 @@ const SearchBar = () => {
       </div>
       <div className="p-relative ms-1 me-1">
         <FaBell className="bell-icon" />
-        <p className="p-absolute notification-number text-light bg-special-green ">
+        <p className="p-absolute text-center notification-number text-light bg-special-green ">
           8
         </p>
       </div>
