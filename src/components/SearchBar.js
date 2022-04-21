@@ -4,10 +4,13 @@ import { FaBell } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 import "./style.css";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const { toggleEmailNavBar, navBarHidden } = props;
   return (
     <div className="d-flex align-items-center bg-white ps-3 pe-2 pt-1 pb-1">
-      <GiHamburgerMenu className="menu-icon p-2 me-1" />
+      <div className="pointer" onClick={() => toggleEmailNavBar(!navBarHidden)}>
+        <GiHamburgerMenu className="menu-icon p-2 me-1" />
+      </div>
       <div className="flex-grow-1 ">
         <input
           className="w-100 search-bar text-bold"

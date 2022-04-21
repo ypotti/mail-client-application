@@ -3,9 +3,14 @@ import { emailNavbarItems, CategoryItems } from "../constants";
 import Category from "./Category";
 import MailItem from "./MailItem";
 
-const EmailNavbar = () => {
+const EmailNavbar = (props) => {
+  const { navBarHidden } = props;
   return (
-    <div className="d-flex flex-column bg-light p-3 col-12 col-md-3">
+    <div
+      className={`d-flex flex-column bg-light p-3 col-12 col-md-3 ${
+        !navBarHidden && "d-none"
+      }`}
+    >
       <button className="compose-mail-btn">Compose Mail</button>
       <div className="mt-3">
         <h6>FOLDERS</h6>

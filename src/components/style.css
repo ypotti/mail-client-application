@@ -150,3 +150,8 @@
 .pointer{
   cursor: pointer;
 }
+.hide-box{
+  width: 0px;
+  background-color: red;
+  /* height: 0px; */
+}
