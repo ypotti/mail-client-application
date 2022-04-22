@@ -7,7 +7,7 @@ const EmailNavbar = (props) => {
   const { navBarHidden } = props;
   return (
     <div
-      className={`d-flex flex-column bg-light p-3 col-12 col-md-3 ${
+      className={`d-flex flex-column bg-near-white p-3 col-12 col-md-3 ${
         !navBarHidden && "d-none"
       }`}
     >

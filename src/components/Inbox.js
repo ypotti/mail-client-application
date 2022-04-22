@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ActionsContext } from "./Mail";
 
 const Inbox = () => {
-  return <div className="bg-success flex-grow-1">Inbox</div>;
+  const { actions, setActions } = useContext(ActionsContext);
+  return (
+    <div className="bg-white flex-grow-1">
+      Inbox
+      <p>{actions.page}</p>
+    </div>
+  );
 };
 
 export default Inbox;

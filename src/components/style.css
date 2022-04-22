@@ -150,8 +150,17 @@
 .pointer{
   cursor: pointer;
 }
-.hide-box{
-  width: 0px;
-  background-color: red;
-  /* height: 0px; */
+
+.bg-near-white{
+  background-color: var(--bg-near-white);
+}
+
+@media screen and (min-width:768px) {
+  .email-form-div{
+    right: 4rem;
+  }
+}
+
+.search-bar-bottom{
+  border-bottom: 1px solid var(--text-Lblue);
 }

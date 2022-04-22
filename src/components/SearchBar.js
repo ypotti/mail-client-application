@@ -7,7 +7,7 @@ import "./style.css";
 const SearchBar = (props) => {
   const { toggleEmailNavBar, navBarHidden } = props;
   return (
-    <div className="d-flex align-items-center bg-white ps-3 pe-2 pt-1 pb-1">
+    <div className="d-flex align-items-center search-bar-bottom bg-white ps-3 pe-2 pt-1 pb-1">
       <div className="pointer" onClick={() => toggleEmailNavBar(!navBarHidden)}>
         <GiHamburgerMenu className="menu-icon p-2 me-1" />
       </div>
