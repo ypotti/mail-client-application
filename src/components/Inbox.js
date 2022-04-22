@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
-import { ActionsContext } from "./Mail";
+import InboxHeader from "./InboxHeader";
 
 const Inbox = () => {
-  const { actions, setActions } = useContext(ActionsContext);
   return (
     <div className="bg-white flex-grow-1">
-      Inbox
-      <p>{actions.page}</p>
+      <InboxHeader />
     </div>
   );
 };
