@@ -11,7 +11,7 @@ const Sidebar = () => {
   const [selectedItem, setSelectedItem] = useState("MailBox");
   return (
     <div
-      className={`d-flex flex-column bg-dark-blue side-bar-box ${
+      className={`d-flex flex-column bg-dark-blue align-self-stretch side-bar-box ${
         !sideBar && "bar-width"
       }`}
     >

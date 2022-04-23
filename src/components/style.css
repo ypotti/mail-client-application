@@ -116,6 +116,18 @@
 .color-special-yellow {
   color: var(--special-yellow);
 }
+.Work{
+  background-color: var(--special-green);
+}
+.Clients{
+  background-color: var(--special-red);
+}
+.Social{
+  background-color: var(--special-blue);
+}
+.Advertising{
+  background-color: var(--special-yellow);
+}
 .notification-number {
   top: -60%;
   right: -50%;
@@ -180,4 +192,19 @@
   border: 2px solid var(--text-Lblue);
   border-radius: 0.3em;
   margin-right: 0.5em;
+}
+.class-read{
+  background-color: #f2f5f5cc;
+  color: var(--light-blue);
+}
+.class-unread{
+  background-color: #ffffffe6;
+}
+.category-text{
+  font-size: 0.7rem;
+  padding: 0.1em 0.5em;
+}
+.inbox-container{
+  height: 90vh;
+  overflow-y: scroll;
 }

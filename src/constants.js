@@ -73,7 +73,7 @@ export const actionDetails = {
       body: " It has been the industry's standard dummy text ever since the 1500s",
       isRead: false,
       isStarred: true,
-      category: "Work",
+      category: null,
     },
     {
       from: "sample4@sam.com",
@@ -89,7 +89,7 @@ export const actionDetails = {
       body: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default ",
       isRead: false,
       isStarred: false,
-      category: "Social",
+      category: null,
     },
     {
       from: "sample6@sam.com",
@@ -97,7 +97,7 @@ export const actionDetails = {
       body: "He is a Latin professor at Hampden-Sydney College in Virginia",
       isRead: true,
       isStarred: false,
-      category: "Advertising",
+      category: null,
     },
     {
       from: "sample7@sam.com",
@@ -173,7 +173,7 @@ export const actionDetails = {
     },
     {
       from: "sample17@sam.com",
-      sub: "If you are going to use a passage of Lorem Ipsum, you need to be sure",
+      sub: "If you are goinpsum, you need to be sure",
       body: "looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the city",
       isRead: false,
       isStarred: true,

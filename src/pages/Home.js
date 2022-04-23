@@ -5,7 +5,7 @@ import "./pages.css";
 
 const Home = () => {
   return (
-    <div className="d-flex h-100vh w-100vw">
+    <div className="d-flex w-100 h-100">
       <Sidebar />
       {/* <div className="flex-grow-1"> */}
       <Outlet />

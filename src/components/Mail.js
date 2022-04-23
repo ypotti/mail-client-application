@@ -13,17 +13,15 @@ const Mail = () => {
   const [user, setUser] = useState(userDetails);
   const [actions, setActions] = useState(actionDetails);
   return (
-    <UserContext.Provider value={{user,setUser}}>
-      <ActionsContext.Provider value={{actions,setActions}}>
+    <UserContext.Provider value={{ user, setUser }}>
+      <ActionsContext.Provider value={{ actions, setActions }}>
         <div className="flex-grow-1 d-flex flex-column">
           <SearchBar
             toggleEmailNavBar={setIsNavBarHide}
             navBarHidden={isNavBarHide}
           />
           <div
-            className={`d-flex flex-column flex-md-row w-100 bg-near-white flex-grow-1 ${
-              isNavBarHide && "p-1 pt-md-3 pe-md-2 pb-md-0"
-            }`}
+            className={`d-flex flex-column flex-md-row w-100 bg-near-white flex-grow-1 inbox-container`}
           >
             <EmailNavbar navBarHidden={isNavBarHide} />
             <Inbox />
