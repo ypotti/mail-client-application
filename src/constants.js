@@ -52,6 +52,7 @@ export const actionDetails = {
   page: "Inbox",
   mailItemsArray: [
     {
+      id: 1,
       from: "sample1@sam.com",
       sub: "It is a long fact",
       body: "established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
@@ -60,6 +61,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 2,
       from: "sample2@sam.com",
       sub: "There are many variations ",
       body: "of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
@@ -68,6 +70,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 3,
       from: "sample3@sam.com",
       sub: "Lorem Ipsum ",
       body: " It has been the industry's standard dummy text ever since the 1500s",
@@ -76,6 +79,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 4,
       from: "sample4@sam.com",
       sub: " essentially unchanged",
       body: "It has survived not only five centuries, but also the leap into electronic typesetting, remaining",
@@ -84,6 +88,7 @@ export const actionDetails = {
       category: "Clients",
     },
     {
+      id: 5,
       from: "sample5@sam.com",
       sub: "model text",
       body: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default ",
@@ -92,6 +97,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 6,
       from: "sample6@sam.com",
       sub: "Richard McClintock",
       body: "He is a Latin professor at Hampden-Sydney College in Virginia",
@@ -100,6 +106,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 7,
       from: "sample7@sam.com",
       sub: "as necessary",
       body: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks",
@@ -108,6 +115,7 @@ export const actionDetails = {
       category: "Social",
     },
     {
+      id: 8,
       from: "sample8@sam.com",
       sub: "for those interested",
       body: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below",
@@ -116,6 +124,7 @@ export const actionDetails = {
       category: "Advertising",
     },
     {
+      id: 9,
       from: "sample9@sam.com",
       sub: "in the middle of text",
       body: "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden",
@@ -124,6 +133,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 10,
       from: "sample10@sam.com",
       sub: "looking at its layout.",
       body: "It is a long established fact that a reader will be distracted by the readable content of a page when looks",
@@ -132,6 +142,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 11,
       from: "sample11@sam.com",
       sub: "Lorem Ipsum",
       body: "has been the industry's standard dummy text ever since the 1500s",
@@ -140,6 +151,7 @@ export const actionDetails = {
       category: "Work",
     },
     {
+      id: 12,
       from: "sample12@sam.com",
       sub: "layout.",
       body: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout",
@@ -148,6 +160,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 13,
       from: "sample14@sam.com",
       sub: "Lorem Ipsum passages",
       body: "It was popularised in the 1960s with the release of Letraset sheets containing pasages",
@@ -156,6 +169,7 @@ export const actionDetails = {
       category: "Clients",
     },
     {
+      id: 14,
       from: "sample15@sam.com",
       sub: "Lorem Ipsum",
       body: "more recently with desktop publishing software like Aldus PageMaker including versions of it",
@@ -164,6 +178,7 @@ export const actionDetails = {
       category: "Work",
     },
     {
+      id: 15,
       from: "sample16@sam.com",
       sub: "word ",
       body: "looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the ",
@@ -172,6 +187,7 @@ export const actionDetails = {
       category: null,
     },
     {
+      id: 16,
       from: "sample17@sam.com",
       sub: "If you are goinpsum, you need to be sure",
       body: "looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the city",
