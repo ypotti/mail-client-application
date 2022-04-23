@@ -195,12 +195,17 @@
   border-radius: 0.3em;
   margin-right: 0.5em;
 }
+.color-inherit{
+  color: inherit;
+}
 .class-read{
   background-color: #f2f5f5cc;
-  color: var(--light-blue);
+  color: #7d878c;
 }
 .class-unread{
   background-color: #ffffffe6;
+  color: var(--light-blue);
+  font-weight: bold;
 }
 .category-text{
   font-size: 0.7rem;
@@ -209,4 +214,7 @@
 .inbox-container{
   height: 92vh;
   overflow-y: scroll;
+}
+.small-font-date{
+  font-size: 0.8rem;
 }

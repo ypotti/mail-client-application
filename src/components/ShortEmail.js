@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { BsEye } from "react-icons/bs";
+import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
 
 const ShortEmail = (props) => {
@@ -13,7 +13,7 @@ const ShortEmail = (props) => {
       } pointer table-row`}
     >
       <td className="ps-4 d-flex align-items-center justify-content-between name-cell">
-        <span className=" fw-bold">{details.from.split("@")[0]}</span>
+        <span>{details.from.split("@")[0]}</span>
         <div
           className={`text-end text-light me-2 rounded category-text ${details.category}`}
         >
@@ -25,7 +25,11 @@ const ShortEmail = (props) => {
       </td>
       <td className="text-end pe-4">23:05 - Apr-21</td>
       <td className="icons-cell fw-bold">
-        <BsEye className="me-3 mini-icon-inbox" title="Mark as Read" />
+        {details.isRead ? (
+          <BsEyeSlash className="me-3 mini-icon-inbox" title="Mark as UnRead" />
+        ) : (
+          <BsEye className="me-3 mini-icon-inbox" title="Mark as Read" />
+        )}
         <AiOutlineDelete className="mini-icon-inbox " title="Delete" />
       </td>
     </tr>
