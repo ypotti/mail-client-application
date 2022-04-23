@@ -174,7 +174,7 @@
 
 @media screen and (min-width:768px) {
   .email-form-div{
-    right: 4rem;
+    right: 5rem;
   }
 }
 
@@ -217,4 +217,22 @@
 }
 .small-font-date{
   font-size: 0.8rem;
+}
+.to-input{
+  outline: none;
+  border: 0px;
+  background-color: transparent;
+  color: var(--light-blue);
+}
+.resize-none{
+  resize: none;
+}
+.height-60 {
+  height: 60%;
+}
+.height-50 {
+  height: 50%;
+}
+.email-form-div{
+  overflow: hidden;
 }
