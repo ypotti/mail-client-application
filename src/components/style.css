@@ -52,6 +52,7 @@
 .side-bar-box {
   position: relative;
   max-width: 300px;
+  height: 100vh;
 }
 .arrow-icon {
   width: 1.4rem;
@@ -179,6 +180,7 @@
 
 .search-bar-bottom{
   border-bottom: 1px solid var(--text-Lblue);
+  height: 8vh;
 }
 .inbox-heading{
   font-size: 1.8rem;
@@ -205,6 +207,6 @@
   padding: 0.1em 0.5em;
 }
 .inbox-container{
-  height: 90vh;
+  height: 92vh;
   overflow-y: scroll;
 }

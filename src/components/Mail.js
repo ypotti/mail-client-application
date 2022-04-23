@@ -21,7 +21,7 @@ const Mail = () => {
             navBarHidden={isNavBarHide}
           />
           <div
-            className={`d-flex flex-column flex-md-row w-100 bg-near-white flex-grow-1 inbox-container`}
+            className={`d-flex flex-column flex-md-row bg-near-white flex-grow-1 inbox-container`}
           >
             <EmailNavbar navBarHidden={isNavBarHide} />
             <Inbox />
