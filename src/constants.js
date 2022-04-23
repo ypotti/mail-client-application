@@ -54,7 +54,7 @@ export const actionDetails = {
     {
       id: 1,
       from: "sample1@sam.com",
-      sub: "It is a long fact",
+      sub: "It is a long fact blished fact that a reader will be distracted by the readable content of a p",
       body: "established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
       isRead: true,
       isStarred: false,

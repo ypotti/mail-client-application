@@ -9,7 +9,7 @@ const ShortEmail = (props) => {
   const { actions, setActions } = useContext(ActionsContext);
   const { details } = props;
 
-  const changeRead = () => {
+  const changeIsRead = () => {
     // Toggle the isRead property when executed
     let newMailItemsArray = [];
     actions.mailItemsArray.forEach((item) => {
@@ -65,6 +65,13 @@ const ShortEmail = (props) => {
     });
   };
 
+  const getSubject = (content, size) => {
+    if (content.length > size) {
+      return content.substring(0, size) + "...";
+    }
+    return content;
+  };
+
   return (
     <tr
       className={`${
@@ -80,7 +87,7 @@ const ShortEmail = (props) => {
         </div>
       </td>
       <td className="content-cell">
-        <span>{details.sub}</span>
+        <span>{getSubject(details.sub, 50)}</span>
       </td>
       <td className="text-end pe-4">23:05 - Apr-21</td>
       <td className="icons-cell fw-bold">
@@ -88,13 +95,13 @@ const ShortEmail = (props) => {
           <BsEyeSlash
             className="me-3 mini-icon-inbox"
             title="Mark as UnRead"
-            onClick={changeRead}
+            onClick={changeIsRead}
           />
         ) : (
           <BsEye
             className="me-3 mini-icon-inbox"
             title="Mark as Read"
-            onClick={changeRead}
+            onClick={changeIsRead}
           />
         )}
         <AiOutlineDelete
