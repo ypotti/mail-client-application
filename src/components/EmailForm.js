@@ -6,7 +6,12 @@ import { ActionsContext } from "./Mail";
 const EmailForm = () => {
   const { actions, setActions } = useContext(ActionsContext);
   const closeEmailForm = () => {
-    setActions({ ...actions, isNewMail: false });
+    setActions({
+      ...actions,
+      isNewMail: false,
+      selectedMail: null,
+      openLongMail: false,
+    });
   };
   return (
     <div
