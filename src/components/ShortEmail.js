@@ -73,6 +73,17 @@ const ShortEmail = (props) => {
   };
 
   const showLongEmail = () => {
+    let newMailItemsArray = [];
+    actions.mailItemsArray.forEach((item) => {
+      if (item.id === details.id) {
+        item.isRead = true;
+      }
+      newMailItemsArray.push(item);
+    });
+    setActions({
+      ...actions,
+      mailItemsArray: [...newMailItemsArray],
+    });
     setActions({
       ...actions,
       isNewMail: true,
@@ -86,11 +97,13 @@ const ShortEmail = (props) => {
       className={`${
         details.isRead ? "class-read" : "class-unread"
       } pointer table-row`}
-      onClick={showLongEmail}
     >
       {console.log(actions)}
 
-      <td className="ps-4 d-flex align-items-center justify-content-between name-cell">
+      <td
+        className="ps-4 d-flex align-items-center justify-content-between name-cell"
+        onClick={showLongEmail}
+      >
         <span>{details.from.split("@")[0]}</span>
         <div
           className={`text-end text-light me-2 rounded category-text ${details.category}`}
@@ -98,10 +111,12 @@ const ShortEmail = (props) => {
           <span>{details.category}</span>
         </div>
       </td>
-      <td className="content-cell">
+      <td className="content-cell" onClick={showLongEmail}>
         <span>{getSubject(details.sub, 40)}</span>
       </td>
-      <td className="text-end pe-4">23:05 - Apr-21</td>
+      <td className="text-end pe-4" onClick={showLongEmail}>
+        23:05 - Apr-21
+      </td>
       <td className="icons-cell fw-bold">
         {details.isRead ? (
           <BsEyeSlash
