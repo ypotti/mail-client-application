@@ -9,7 +9,12 @@ const EmailNavbar = (props) => {
   const { actions, setActions } = useContext(ActionsContext);
 
   const showEmailForm = () => {
-    setActions({ ...actions, isNewMail: true });
+    setActions({
+      ...actions,
+      isNewMail: true,
+      openLongMail: false,
+      selectedMail: null,
+    });
   };
   return (
     <div

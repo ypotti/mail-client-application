@@ -59,7 +59,7 @@ const ShortEmail = (props) => {
 
         Toast.fire({
           icon: "success",
-          title: "File Deleted Successfully",
+          title: "E-mail Deleted Successfully",
         });
       }
     });
@@ -72,12 +72,24 @@ const ShortEmail = (props) => {
     return content;
   };
 
+  const showLongEmail = () => {
+    setActions({
+      ...actions,
+      isNewMail: true,
+      openLongMail: true,
+      selectedMail: { ...details },
+    });
+  };
+
   return (
     <tr
       className={`${
         details.isRead ? "class-read" : "class-unread"
       } pointer table-row`}
+      onClick={showLongEmail}
     >
+      {console.log(actions)}
+
       <td className="ps-4 d-flex align-items-center justify-content-between name-cell">
         <span>{details.from.split("@")[0]}</span>
         <div
@@ -87,7 +99,7 @@ const ShortEmail = (props) => {
         </div>
       </td>
       <td className="content-cell">
-        <span>{getSubject(details.sub, 50)}</span>
+        <span>{getSubject(details.sub, 40)}</span>
       </td>
       <td className="text-end pe-4">23:05 - Apr-21</td>
       <td className="icons-cell fw-bold">

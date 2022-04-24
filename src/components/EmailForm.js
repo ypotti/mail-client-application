@@ -15,33 +15,59 @@ const EmailForm = () => {
       }`}
     >
       <div className="d-flex text-light bg-secondary pt-2 pb-1 ps-4 pe-4 mb-2 align-items-center justify-content-between rounded-top">
-        <span>New Message</span>
+        {actions.openLongMail ? (
+          <span>Message from {actions.selectedMail.from.split("@")[0]}</span>
+        ) : (
+          <span>New Message</span>
+        )}
         <div className="p-2 pointer" onClick={closeEmailForm}>
           <AiOutlineClose />
         </div>
       </div>
       <div className="w-100 border-bottom border-1 ps-4 pe-4 mt-2 mb-2 pb-1 pt-1 d-flex align-items-center">
-        <span>To:</span>
-        <input
-          type="text"
-          className="flex-grow-1 ps-3 to-input"
-          placeholder="Recipients"
-        />
+        {actions.openLongMail ? (
+          <>
+            <span className="fw-bold">From:</span>
+            <span className="ps-1">{actions.selectedMail.from}</span>
+          </>
+        ) : (
+          <>
+            <span className="fw-bold">To:</span>
+            <input
+              type="text"
+              className="flex-grow-1 ps-3 to-input"
+              placeholder="Recipients"
+            />
+          </>
+        )}
       </div>
-      <div className="w-100 border-bottom border-1 ps-4 pe-4 mt-2 mb-2 pb-1 pt-1 d-flex align-items-center">
-        <span>Sub:</span>
-        <input
-          type="text"
-          className="flex-grow-1 ps-2 to-input"
-          placeholder="Subject "
-        />
+      <div className="w-100 border-bottom border-1 ps-4 pe-4 mt-2 mb-2 pb-1 pt-1 d-flex ">
+        <span className="fw-bold">Sub:</span>
+        {actions.openLongMail ? (
+          <span className="ps-3">{actions.selectedMail.sub}</span>
+        ) : (
+          <input
+            type="text"
+            className="flex-grow-1 ps-2 to-input"
+            placeholder="Subject "
+          />
+        )}
       </div>
       <div className="ps-4 pe-4 height-50 flex-grow-1 mb-auto">
-        <textarea
-          className="w-100 h-100 to-input resize-none"
-          cols="100"
-          placeholder="Start typing..."
-        />
+        {actions.openLongMail ? (
+          <textarea
+            disabled
+            className="w-100 h-100 to-input resize-none"
+            value={actions.selectedMail.body}
+          />
+        ) : (
+          <textarea
+            value={""}
+            className="w-100 h-100 to-input resize-none"
+            cols="100"
+            placeholder="Start typing..."
+          />
+        )}
       </div>
       <div className="border-top border-2 d-flex justify-content-end ps-4 pe-4 pt-2 pb-2 ">
         <button className="btn btn-outline-secondary me-4">

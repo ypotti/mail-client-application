@@ -197,7 +197,8 @@ export const actionDetails = {
     },
   ],
   isNewMail: false,
-  openMailId: null,
+  openLongMail: false,
+  selectedMail: null,
 };
 
 export const emailNavbarItems = [
