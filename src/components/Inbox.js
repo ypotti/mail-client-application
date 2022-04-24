@@ -5,7 +5,7 @@ import ShortEmail from "./ShortEmail";
 import ShortMobileMail from "./ShortMobileMail";
 
 const Inbox = () => {
-  const { actions, setActions } = useContext(ActionsContext);
+  const { actions } = useContext(ActionsContext);
   return (
     <div className="bg-white flex-grow-1">
       <InboxHeader />

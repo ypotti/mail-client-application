@@ -196,6 +196,8 @@ export const actionDetails = {
       category: "Social",
     },
   ],
+  isNewMail: false,
+  openMailId: null,
 };
 
 export const emailNavbarItems = [

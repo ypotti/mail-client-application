@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
 import { emailNavbarItems, CategoryItems } from "../constants";
 import Category from "./Category";
 import MailItem from "./MailItem";
+import { ActionsContext } from "./Mail";
 
 const EmailNavbar = (props) => {
   const { navBarHidden } = props;
+  const { actions, setActions } = useContext(ActionsContext);
+
+  const showEmailForm = () => {
+    setActions({ ...actions, isNewMail: true });
+  };
   return (
     <div
       className={`d-flex flex-column bg-near-white p-3 col-12 col-md-3 ${
         !navBarHidden && "d-none"
       }`}
     >
-      <button className="compose-mail-btn">Compose Mail</button>
+      <button className="compose-mail-btn" onClick={showEmailForm}>
+        Compose Mail
+      </button>
       <div className="mt-3">
         <h6>FOLDERS</h6>
         <ul className="un-ordered-list ms-3">

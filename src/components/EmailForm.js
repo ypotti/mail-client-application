@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./style.css";
 import { AiOutlineClose } from "react-icons/ai";
+import { ActionsContext } from "./Mail";
 
 const EmailForm = () => {
+  const { actions, setActions } = useContext(ActionsContext);
+  const closeEmailForm = () => {
+    setActions({ ...actions, isNewMail: false });
+  };
   return (
-    <div className="d-flex flex-column p-absolute bottom-0 d-none d-md-block col-md-4 height-60 email-form-div bg-light shadow">
+    <div
+      className={`d-flex flex-column p-absolute bottom-0 d-none d-md-block col-md-4 height-60 email-form-div bg-light shadow ${
+        !actions.isNewMail && "d-md-none"
+      }`}
+    >
       <div className="d-flex text-light bg-secondary pt-2 pb-1 ps-4 pe-4 mb-2 align-items-center justify-content-between rounded-top">
         <span>New Message</span>
-        <div className="p-2 pointer">
+        <div className="p-2 pointer" onClick={closeEmailForm}>
           <AiOutlineClose />
         </div>
       </div>
