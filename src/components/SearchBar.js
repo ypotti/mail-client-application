@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaBell } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 import "./style.css";
 import Swal from "sweetalert2";
+import { ActionsContext } from "./Mail";
+import { getUnreadEmailCount } from "./InboxHeader";
 
 const SearchBar = (props) => {
   const { toggleEmailNavBar, navBarHidden } = props;
+  const { actions } = useContext(ActionsContext);
 
   const logoutHandler = () => {
     Swal.fire({
@@ -38,9 +41,11 @@ const SearchBar = (props) => {
       </div>
       <div className="p-relative ms-1 me-1">
         <FaBell className="bell-icon" />
-        <p className="p-absolute text-center notification-number text-light bg-special-green ">
-          8
-        </p>
+        {getUnreadEmailCount(actions) !== 0 && (
+          <p className="p-absolute text-center notification-number text-light bg-special-green ">
+            {getUnreadEmailCount(actions)}
+          </p>
+        )}
       </div>
 
       <button

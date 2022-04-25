@@ -5,6 +5,14 @@ import { BsEye } from "react-icons/bs";
 import "./style.css";
 import Swal from "sweetalert2";
 
+export const getUnreadEmailCount = (actions) => {
+  let count = 0;
+  actions.mailItemsArray.forEach((item) => {
+    if (item.isRead === false) count = count + 1;
+  });
+  return count;
+};
+
 const InboxHeader = () => {
   const { actions, setActions } = useContext(ActionsContext);
 
@@ -35,7 +43,9 @@ const InboxHeader = () => {
 
   return (
     <div className="pt-4 ps-4 pe-3 pb-2 border-bottom border-2 d-flex align-items-center justify-content-between">
-      <span className="inbox-heading">{actions.page} (6)</span>
+      <span className="inbox-heading">
+        {actions.page} {`(${getUnreadEmailCount(actions)})`}
+      </span>
       <div className="d-flex">
         <button className="inbox-btn">
           <BiRefresh className="mini-icon-inbox" />

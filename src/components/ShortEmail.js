@@ -68,7 +68,7 @@ export const getSubject = (content, size) => {
   return content;
 };
 
-export const showLongEmail = (actions,setActions,details) => {
+export const showLongEmail = (actions, setActions, details) => {
   let newMailItemsArray = [];
   actions.mailItemsArray.forEach((item) => {
     if (item.id === details.id) {
@@ -89,7 +89,6 @@ const ShortEmail = (props) => {
   const { actions, setActions } = useContext(ActionsContext);
   const { details } = props;
 
-
   return (
     <tr
       className={`${
@@ -98,7 +97,7 @@ const ShortEmail = (props) => {
     >
       <td
         className="ps-4 d-flex align-items-center justify-content-between name-cell"
-        onClick={()=>showLongEmail}
+        onClick={() => showLongEmail(actions, setActions, details)}
       >
         <span>{details.from.split("@")[0]}</span>
         <div
@@ -107,10 +106,16 @@ const ShortEmail = (props) => {
           <span>{details.category}</span>
         </div>
       </td>
-      <td className="content-cell" onClick={showLongEmail}>
+      <td
+        className="content-cell"
+        onClick={() => showLongEmail(actions, setActions, details)}
+      >
         <span>{getSubject(details.sub, 40)}</span>
       </td>
-      <td className="text-end pe-4" onClick={showLongEmail}>
+      <td
+        className="text-end pe-4"
+        onClick={() => showLongEmail(actions, setActions, details)}
+      >
         23:05 - Apr-21
       </td>
       <td className="icons-cell fw-bold">
