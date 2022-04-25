@@ -43,14 +43,12 @@ const SearchBar = (props) => {
         </p>
       </div>
 
-      <button className="align-self-center logout-btn">
+      <button
+        className="align-self-center logout-btn p-2 ms-3 pointer"
+        onClick={logoutHandler}
+      >
         <MdOutlineLogout className="logout-icon " />
-        <span
-          className="d-none d-md-inline ms-1 fw-bold"
-          onClick={logoutHandler}
-        >
-          Logout
-        </span>
+        <span className="d-none d-md-inline ms-1 fw-bold">Logout</span>
       </button>
     </div>
   );

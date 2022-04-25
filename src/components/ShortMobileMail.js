@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { BiCaretDown, BiCaretUp } from "react-icons/bi";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
 import "./style.css";
+import { changeIsRead, openWindowToConfirm, getSubject } from "./ShortEmail";
+import { ActionsContext } from "./Mail";
 
 const ShortMobileMail = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { actions, setActions } = useContext(ActionsContext);
   const { details } = props;
   return (
     <div
@@ -23,7 +26,7 @@ const ShortMobileMail = (props) => {
         <div className="small-font-date ms-auto">21 Apr</div>
       </div>
       <div className="d-flex align-items-center">
-        {details.sub}
+        {getSubject(details.sub, 30)}
         <div
           className={`ms-auto ${isOpen && "d-none"}`}
           onClick={() => setIsOpen(!isOpen)}
@@ -36,17 +39,26 @@ const ShortMobileMail = (props) => {
           className={`d-flex align-items-center mt-3 mb-1 justify-content-around flex-grow-1`}
         >
           {details.isRead ? (
-            <div className="btn btn-outline-secondary d-flex align-items-center">
+            <div
+              className="btn btn-outline-secondary d-flex align-items-center"
+              onClick={() => changeIsRead(actions, setActions, details)}
+            >
               <BsEyeSlash className="me-2 mini-icon-inbox" />
               <span className="small-font-date">Mark as UnRead</span>
             </div>
           ) : (
-            <div className="btn btn-outline-secondary d-flex align-items-center">
+            <div
+              className="btn btn-outline-secondary d-flex align-items-center"
+              onClick={() => changeIsRead(actions, setActions, details)}
+            >
               <BsEye className="me-2 mini-icon-inbox" />
               <span className="small-font-date">Mark as read</span>
             </div>
           )}
-          <div className="btn btn-outline-secondary d-flex align-items-center">
+          <div
+            className="btn btn-outline-secondary d-flex align-items-center"
+            onClick={() => openWindowToConfirm(actions, setActions, details)}
+          >
             <AiOutlineDelete className="mini-icon-inbox me-2" title="Delete" />
             <span className="small-font-date">Delete</span>
           </div>
