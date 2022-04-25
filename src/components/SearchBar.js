@@ -3,9 +3,28 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaBell } from "react-icons/fa";
 import { MdOutlineLogout } from "react-icons/md";
 import "./style.css";
+import Swal from "sweetalert2";
 
 const SearchBar = (props) => {
   const { toggleEmailNavBar, navBarHidden } = props;
+
+  const logoutHandler = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "Logout",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: "success",
+          title: "Logged Out Successfully",
+        });
+      }
+    });
+  };
   return (
     <div className="d-flex align-items-center search-bar-bottom bg-white ps-3 pe-2 pt-1 pb-1">
       <div className="pointer" onClick={() => toggleEmailNavBar(!navBarHidden)}>
@@ -26,7 +45,12 @@ const SearchBar = (props) => {
 
       <button className="align-self-center logout-btn">
         <MdOutlineLogout className="logout-icon " />
-        <span className="d-none d-md-inline ms-1 fw-bold">LogOut</span>
+        <span
+          className="d-none d-md-inline ms-1 fw-bold"
+          onClick={logoutHandler}
+        >
+          Logout
+        </span>
       </button>
     </div>
   );

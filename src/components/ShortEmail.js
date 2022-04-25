@@ -95,8 +95,6 @@ const ShortEmail = (props) => {
         details.isRead ? "class-read" : "class-unread"
       } pointer table-row`}
     >
-      {console.log(actions)}
-
       <td
         className="ps-4 d-flex align-items-center justify-content-between name-cell"
         onClick={showLongEmail}
