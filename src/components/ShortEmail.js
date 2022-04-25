@@ -83,9 +83,6 @@ const ShortEmail = (props) => {
     setActions({
       ...actions,
       mailItemsArray: [...newMailItemsArray],
-    });
-    setActions({
-      ...actions,
       isNewMail: true,
       openLongMail: true,
       selectedMail: { ...details },
