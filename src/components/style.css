@@ -54,6 +54,7 @@
   max-width: 300px;
   height: 100vh;
 }
+/* @media screen and (min-width:768px){ */
 .arrow-icon {
   width: 1.4rem;
   height: 1.4rem;
@@ -65,6 +66,26 @@
   background-color: white;
   transform: rotate(0deg);
   cursor: pointer;
+/* } */
+}
+.arrow-icon-container{
+  background-color: var(--special-green);
+  position:absolute;
+  width: 3.5rem;
+  right: -3.5rem;
+  top: 40%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding-right: 0.5rem;
+}
+.arrow-icon-mobile{
+  color: white;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 .t-180 {
   transform: rotate(180deg);

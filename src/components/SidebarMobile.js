@@ -2,26 +2,25 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import UserImage from "../assets/user.jpg";
 import { sideBarConstants, userDetails } from "../constants";
-import { SiMicrosoftoutlook } from "react-icons/si";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import "./style.css";
 
-const Sidebar = () => {
+const SidebarMobile = () => {
   const [sideBar, setSideBar] = useState(true);
   const [selectedItem, setSelectedItem] = useState("MailBox");
   return (
     <div
-      className={`d-flex flex-column bg-dark-blue side-bar-box d-none d-md-block ${
+      className={`d-flex flex-column p-absolute bg-dark-blue side-bar-box d-md-none ${
         !sideBar && "bar-width"
       } `}
     >
-      <div className="" onClick={() => setSideBar(!sideBar)}>
+      <div
+        className="arrow-icon-container"
+        onClick={() => setSideBar(!sideBar)}
+      >
         <IoIosArrowDroprightCircle
-          className={`arrow-icon ${!sideBar && "t-180"}`}
+          className={`arrow-icon-mobile ${!sideBar && "t-180"}`}
         />
-      </div>
-      <div className={`${!sideBar && "d-none"} text-light p-3`}>
-        <SiMicrosoftoutlook className="icon" />
       </div>
       <div
         className={`d-flex flex-column profile-box mt-4 justify-content-center ${
@@ -41,7 +40,7 @@ const Sidebar = () => {
             onClick={() => setSelectedItem(ele.displayName)}
             className={`sidebar-element p-2 ${
               ele.displayName === selectedItem && "apply-border"
-            }`}
+            } ${sideBar && "d-none"}`}
           >
             <Link
               to={ele.link}
@@ -50,9 +49,7 @@ const Sidebar = () => {
               } ${ele.displayName === selectedItem && "text-white"}`}
             >
               <div>{ele.icon}</div>
-              <div className={`p-2 display-name-box ${sideBar && "d-none"}`}>
-                {ele.displayName}
-              </div>
+              <div className={`p-2 display-name-box `}>{ele.displayName}</div>
             </Link>
           </li>
         ))}
@@ -61,4 +58,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarMobile;
